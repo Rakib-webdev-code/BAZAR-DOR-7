@@ -2,7 +2,8 @@
 
 প্রয়োজনীয় পণ্যের দৈনিক বাজার দর এক নজরে দেখার একটি Next.js ওয়েব অ্যাপ। চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম-দুধ ও মসলার আজকের দাম, আগের দিনের তুলনায় দাম বাড়া-কমা এবং বিভাগ ও বাজারভিত্তিক দামের তুলনা এখানে পাওয়া যায়।
 
-🔗 **Live:** <তোমার Vercel লিংক>
+🔗 **Live Link:** https://bazar-dor-lyart.vercel.app
+💻 **GitHub Repository:** https://github.com/Rakib-webdev-code/BAZAR-DOR-7
 
 ## ব্যবহৃত প্রযুক্তি
 
@@ -21,9 +22,4 @@
 5. **অথেনটিকেশন ও প্রোফাইল:** ইমেইল/পাসওয়ার্ড এবং Google/GitHub লগইন, protected route, toast নোটিফিকেশন ও নাম আপডেট
 6. **সম্পূর্ণ রেসপনসিভ:** মোবাইল, ট্যাবলেট ও ডেস্কটপে সমানভাবে কাজ করে
 
-## লোকালি চালানো
-
-1. `git clone <repo-url>` ও `cd bazar-dor`
-2. `npm install`
-3. `.env` ফাইলে `BETTER_AUTH_SECRET`, `BETTER_AUTH_URL`, `BETTER_AUTH_DB_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` দাও
-4. `npm run dev`
+## Live Link: https://bazar-dor-lyart.vercel.app
