@@ -16,17 +16,17 @@ export default function NavLinks({ categories }: { categories: Category[] }) {
 
   return (
     <nav className="border-t border-green-100">
-      <ul className="max-w-6xl mx-auto px-4 py-2 flex gap-1 overflow-x-auto text-sm whitespace-nowrap">
+      <ul className="max-w-6xl mx-auto px-3 sm:px-4 py-2 flex flex-wrap md:flex-nowrap gap-1 text-xs sm:text-sm md:overflow-x-auto md:whitespace-nowrap">
         {items.map((item) => {
           const active = pathname === item.href;
           return (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={`block rounded-md px-3 py-1.5 transition ${
+                className={`block rounded-md px-2.5 sm:px-3 py-1.5 transition whitespace-nowrap ${
                   active
                     ? "bg-green-700 text-white font-semibold"
-                    : "text-gray-700 hover:bg-green-50"
+                    : "text-gray-700 bg-green-50 md:bg-transparent hover:bg-green-100"
                 }`}
               >
                 {item.label}

@@ -28,11 +28,11 @@ export default async function Navbar() {
 
   return (
     <header className="bg-white border-b border-green-100 sticky top-0 z-40">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src={logo} alt="বাজার দর" width={36} height={36} priority />
-          <div className="leading-tight">
-            <p className="font-bold text-lg">বাজার দর</p>
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-3 flex items-center justify-between gap-2">
+        <Link href="/" className="flex items-center gap-2 min-w-0">
+          <Image src={logo} alt="বাজার দর" width={36} height={36} priority className="shrink-0" />
+          <div className="leading-tight min-w-0">
+            <p className="font-bold text-base sm:text-lg">বাজার দর</p>
             <BanglaDate />
           </div>
         </Link>
