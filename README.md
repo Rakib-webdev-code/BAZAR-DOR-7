@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 বাজার দর (BazarDor)
 
-## Getting Started
+প্রয়োজনীয় পণ্যের দৈনিক বাজার দর এক নজরে দেখার একটি Next.js ওয়েব অ্যাপ। চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম-দুধ ও মসলার আজকের দাম, আগের দিনের তুলনায় দাম বাড়া-কমা এবং বিভাগ ও বাজারভিত্তিক দামের তুলনা এখানে পাওয়া যায়।
 
-First, run the development server:
+🔗 **Live:** <তোমার Vercel লিংক>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ব্যবহৃত প্রযুক্তি
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js (App Router) ও TypeScript
+- Tailwind CSS ও DaisyUI
+- BetterAuth (Email/Password, Google, GitHub)
+- MongoDB (Atlas)
+- react-hot-toast ও react-icons
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## মূল ফিচার
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **লাইভ প্রাইস টিকার:** ইমোজি, নাম, দাম ও ▲/▼ পরিবর্তনসহ অসীম স্ক্রলিং স্ট্রিপ
+2. **আজ দাম বেড়েছে / কমেছে:** সবচেয়ে বেশি বাড়া ও কমা ৬টি করে পণ্য
+3. **ক্যাটাগরি পেজ ও সর্টিং:** দাম কম থেকে বেশি বা বেশি থেকে কম সাজানো, স্কেলিটন লোডিং ও empty state
+4. **বাজারভিত্তিক দাম:** লগইন করা ব্যবহারকারীর জন্য প্রতিটি পণ্যের বিভাগ ও বাজার অনুযায়ী সর্বনিম্ন, সর্বোচ্চ ও গড় দাম
+5. **অথেনটিকেশন ও প্রোফাইল:** ইমেইল/পাসওয়ার্ড এবং Google/GitHub লগইন, protected route, toast নোটিফিকেশন ও নাম আপডেট
+6. **সম্পূর্ণ রেসপনসিভ:** মোবাইল, ট্যাবলেট ও ডেস্কটপে সমানভাবে কাজ করে
 
-## Learn More
+## লোকালি চালানো
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. `git clone <repo-url>` ও `cd bazar-dor`
+2. `npm install`
+3. `.env` ফাইলে `BETTER_AUTH_SECRET`, `BETTER_AUTH_URL`, `BETTER_AUTH_DB_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` দাও
+4. `npm run dev`
