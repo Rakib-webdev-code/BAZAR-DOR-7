@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Hind_Siliguri } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import Ticker from "@/components/Ticker";
 import "./globals.css";
 
 const font = Hind_Siliguri({
@@ -17,7 +20,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="bn" data-theme="light">
       <body className={`${font.className} min-h-screen flex flex-col`}>
-        {children}
+        <Navbar />
+        <Ticker />
+        <main className="flex-1">{children}</main>
+        <Footer />
         <Toaster position="top-center" />
       </body>
     </html>
