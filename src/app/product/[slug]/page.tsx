@@ -1,11 +1,35 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import ChangeBadge from "@/components/ChangeBadge";
 import ProtectedGuard from "@/components/ProtectedGuard";
 import { getProducts } from "@/lib/api";
 import { bnNum, unitLabel } from "@/lib/bn";
 
-export default async function ProductPage({
+function ProductSkeleton() {
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-8 animate-pulse space-y-4">
+      <div className="h-4 w-40 bg-gray-200 rounded" />
+      <div className="h-28 bg-gray-200 rounded-xl" />
+      <div className="h-24 bg-gray-200 rounded-xl" />
+      <div className="h-64 bg-gray-200 rounded-xl" />
+    </div>
+  );
+}
+
+export default function ProductPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  return (
+    <Suspense fallback={<ProductSkeleton />}>
+      <ProductContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ProductContent({
   params,
 }: {
   params: Promise<{ slug: string }>;
