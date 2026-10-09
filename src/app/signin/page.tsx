@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import PasswordInput from "@/components/PasswordInput";
 import { authClient } from "@/lib/auth-client";
 
 export default function SignInPage() {
@@ -40,28 +41,44 @@ export default function SignInPage() {
         <form onSubmit={onSubmit} className="mt-6 space-y-4">
           <label className="block">
             <span className="text-sm">ইমেইল</span>
-            <input name="email" type="email" className="input input-bordered w-full mt-1" placeholder="you@example.com" />
+            <input
+              name="email"
+              type="email"
+              className="input input-bordered w-full mt-1"
+              placeholder="you@example.com"
+            />
           </label>
           <label className="block">
             <span className="text-sm">পাসওয়ার্ড</span>
-            <input name="password" type="password" className="input input-bordered w-full mt-1" placeholder="পাসওয়ার্ড" />
+            <PasswordInput />
           </label>
-          <button disabled={loading} className="btn bg-green-700 hover:bg-green-800 text-white w-full">
+          <button
+            disabled={loading}
+            className="btn bg-green-700 hover:bg-green-800 text-white w-full"
+          >
             {loading ? "অপেক্ষা করুন..." : "সাইন ইন"}
           </button>
         </form>
         <div className="divider text-xs">অথবা</div>
         <div className="grid grid-cols-2 gap-3">
-          <button onClick={() => social("google")} className="btn btn-outline btn-sm sm:btn-md">
+          <button
+            onClick={() => social("google")}
+            className="btn btn-outline btn-sm sm:btn-md"
+          >
             <FaGoogle /> Google
           </button>
-          <button onClick={() => social("github")} className="btn btn-outline btn-sm sm:btn-md">
+          <button
+            onClick={() => social("github")}
+            className="btn btn-outline btn-sm sm:btn-md"
+          >
             <FaGithub /> GitHub
           </button>
         </div>
         <p className="text-center text-sm mt-5">
           নতুন ব্যবহারকারী?{" "}
-          <Link href="/signup" className="text-green-700 font-semibold">সাইন আপ</Link>
+          <Link href="/signup" className="text-green-700 font-semibold">
+            সাইন আপ
+          </Link>
         </p>
       </div>
     </div>
